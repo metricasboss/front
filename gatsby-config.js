@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Métricas Boss - Agência de Web Analytics!`,
+    description: `A Métricas Boss é uma agência de Web Analytics e usabilidade. Conte com uma empresa certificada Google Analytics para sua gestão de web analytics.`,
+    author: `@metricasboss`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +11,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`article`],
       },
     },
     `gatsby-transformer-sharp`,
