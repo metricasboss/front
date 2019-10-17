@@ -1,14 +1,10 @@
 import React from "react"
+import Card from "./card"
 
-const Grid = ({ CategoryPost }) (
+const Grid = ({ categoryPost }) (
     <div className="columns">
       {data.allStrapiArticle.edges.map(document => (
-        <div key={document.node.id} className="column">
-        <Link to={`/${document.node.id}`}>
-              {document.node.title}
-            </Link>
-            <Img fixed={document.node.feature.childImageSharp.fixed}/>
-        </div>
+        <Card singlePost={document.node} />
       ))} 
       </div>
 )
