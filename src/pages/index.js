@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     
       <div className="columns">
-      {data.allStrapiArticle.edges.map(document => (
+      {data.googleAnalytics.edges.map(document => (
         <div key={document.node.id} className="column">
         <Link to={`/${document.node.id}`}>
               {document.node.title}
@@ -24,8 +24,11 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allStrapiArticle {
+  query {
+    googleAnalytics: allStrapiArticle(
+      filter: {categories: {elemMatch: {slug: {eq: "google-analytics"}}}},
+      limit: 4
+      ) {
       edges {
         node {
           id,
