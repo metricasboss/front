@@ -1,23 +1,19 @@
-import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Grid from "../components/grid"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    
-      <div className="columns">
-      {data.googleAnalytics.edges.map(document => (
-        <div key={document.node.id} className="column">
-        <Link to={`/${document.node.id}`}>
-              {document.node.title}
-            </Link>
-            <Img fixed={document.node.feature.childImageSharp.fixed}/>
+      <section className="section">
+        <div className="container">
+          <Grid posts={data.googleAnalytics.edges} />
         </div>
-      ))} 
-      </div>
+      </section>
   </Layout>
 )
 
@@ -37,7 +33,7 @@ export const pageQuery = graphql`
           feature {
             id
             childImageSharp {
-              fixed(width: 200, height:120) {
+              fixed(width: 318, height: 318) {
                 ...GatsbyImageSharpFixed
               }
             }

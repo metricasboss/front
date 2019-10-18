@@ -1,12 +1,22 @@
+import PropTypes from "prop-types"
+
 import React from "react"
 import Card from "./card"
 
-const Grid = ({ categoryPost }) (
+const Grid = ({ posts }) => (
     <div className="columns">
-      {data.allStrapiArticle.edges.map(document => (
+      {posts.map(document => (
         <Card singlePost={document.node} />
       ))} 
-      </div>
+    </div>
 )
+
+Grid.propTypes = {
+    posts: PropTypes.array,
+}
+
+Grid.defaultProps = {
+    posts: [],
+}
 
 export default Grid
