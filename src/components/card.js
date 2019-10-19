@@ -15,7 +15,7 @@ const Card = ({ singlePost }) => (
                 <div className="media">
                 <div className="media-left">
                     <figure className="image is-48x48">
-                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"/>
+                        <Img fixed="https://bulma.io/images/placeholders/96x96.png"/>
                     </figure>
                 </div>
                 <div className="media-content">
@@ -28,8 +28,13 @@ const Card = ({ singlePost }) => (
 
                 <div className="content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a href="#">#css</a> <a href="#">#responsive</a>
+                Phasellus nec iaculis mauris.
+                <Link to="/">
+                    #css
+                </Link>
+                <Link to="/">
+                    #responsive
+                </Link>
                 <br/>
                 <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                 </div>
