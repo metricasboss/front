@@ -5,9 +5,12 @@ import Card from "./card"
 
 const Grid = ({ posts }) => (
     <div className="columns">
-      {posts.map(document => (
-        <Card singlePost={document.node} />
-      ))} 
+      
+        {posts.map(document => (
+          <div key={document.node.id}>
+            <Card singlePost={document.node} />
+          </div>
+        ))} 
     </div>
 )
 
