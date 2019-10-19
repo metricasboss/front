@@ -1,66 +1,91 @@
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img alt="" src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-      </a>
-
-      <a href="#" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-
-        <a class="navbar-item">
-          Documentation
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a href="#" class="navbar-link">
-            More
+class Header extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {showHamburguer: false};
+    this.handleClick = this.handleClick.bind(this);
+  }
+  
+  handleClick(e){
+    this.setState(prevState => ({
+      showHamburguer: !prevState.showHamburguer
+    }));
+  }
+  render() {
+    return (
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="https://bulma.io">
+            <img alt="" src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
           </a>
 
-          <div class="navbar-dropdown">
-            <a href="#" class="navbar-item">
-              About
-            </a>
-            <a href="#" class="navbar-item">
-              Jobs
-            </a>
-            <a chref="#" lass="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider" />
-            <a href="#" class="navbar-item">
-              Report an issue
-            </a>
-          </div>
+          <a role="button" className={`navbar-burger burger ${this.state.showHamburguer
+          ? "is-active"
+          : ""}`} 
+          aria-label="menu" 
+          aria-expanded="false" 
+          data-target="navbarBasicExample" 
+          onClick={this.handleClick}>
+            
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-      </div>
 
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a href="#" class="button is-primary">
-              <strong>Sign up</strong>
+        <div id="navbarBasicExample" className={`navbar-menu ${this.state.showHamburguer
+          ? "is-active"
+          : ""}`}>
+          <div className="navbar-start">
+            <a className="navbar-item">
+              Home
             </a>
-            <a href="#" class="button is-light">
-              Log in
+
+            <a className="navbar-item">
+              Documentation
             </a>
+
+            <div className="navbar-item has-dropdown is-hoverable">
+              <a href="#" className="navbar-link">
+                More
+              </a>
+
+              <div className="navbar-dropdown">
+                <a href="#" className="navbar-item">
+                  About
+                </a>
+                <a href="#" className="navbar-item">
+                  Jobs
+                </a>
+                <a chref="#" lass="navbar-item">
+                  Contact
+                </a>
+                <hr className="navbar-divider" />
+                <a href="#" className="navbar-item">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons">
+                <a href="#" className="button is-primary">
+                  <strong>Sign up</strong>
+                </a>
+                <a href="#" className="button is-light">
+                  Log in
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </nav>
-)
+      </nav>
+    )
+  }
+}
 
 export default Header
