@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 
 class Header extends React.Component {
@@ -28,7 +29,7 @@ class Header extends React.Component {
           aria-expanded="false" 
           data-target="navbarBasicExample" 
           onClick={this.handleClick}>
-            
+
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -39,46 +40,49 @@ class Header extends React.Component {
           ? "is-active"
           : ""}`}>
           <div className="navbar-start">
-            <a className="navbar-item">
-              Home
-            </a>
+            
+          <Link 
+            to="/"
+            className="navbar-item"
+          >
+            Home
+          </Link>
 
-            <a className="navbar-item">
-              Documentation
-            </a>
+          <Link 
+            to="/"
+            className="navbar-item"
+          >
+            Documentation
+          </Link>
 
             <div className="navbar-item has-dropdown is-hoverable">
-              <a href="#" className="navbar-link">
-                More
-              </a>
-
+            <Link 
+            to="/"
+            className="navbar-link"
+          >
+            More
+          </Link>
               <div className="navbar-dropdown">
-                <a href="#" className="navbar-item">
-                  About
-                </a>
-                <a href="#" className="navbar-item">
+                <Link 
+                  to="/"
+                  className="navbar-item"
+                >
                   Jobs
-                </a>
-                <a chref="#" lass="navbar-item">
-                  Contact
-                </a>
-                <hr className="navbar-divider" />
-                <a href="#" className="navbar-item">
-                  Report an issue
-                </a>
-              </div>
-            </div>
-          </div>
+                </Link>
 
-          <div className="navbar-end">
-            <div className="navbar-item">
-              <div className="buttons">
-                <a href="#" className="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a href="#" className="button is-light">
-                  Log in
-                </a>
+                <Link 
+                  to="/"
+                  className="navbar-item"
+                >
+                  Contact
+                </Link>
+                <hr className="navbar-divider" />
+                <Link 
+                  to="/"
+                  className="navbar-item"
+                >
+                  Report an issue
+                </Link>
               </div>
             </div>
           </div>
