@@ -22,7 +22,7 @@ class Header extends React.Component {
             <img alt="" src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
           </a>
 
-          <a role="button" className={`navbar-burger burger ${this.state.showHamburguer
+          <Link className={`navbar-burger burger ${this.state.showHamburguer
           ? "is-active"
           : ""}`} 
           aria-label="menu" 
@@ -33,7 +33,7 @@ class Header extends React.Component {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </Link>
         </div>
 
         <div id="navbarBasicExample" className={`navbar-menu ${this.state.showHamburguer
