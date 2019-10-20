@@ -8,7 +8,7 @@ const Card = ({ singlePost }) => (
         <div className="card">
             <div className="card-image">
                 <figure className="image">
-                <Img fixed={singlePost.feature.childImageSharp.fixed}/>
+                <Img fluid={singlePost.feature.childImageSharp.fluid}/>
                 </figure>
             </div>
             <div className="card-content">

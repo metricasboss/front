@@ -32,8 +32,8 @@ export const pageQuery = graphql`
           feature {
             id
             childImageSharp {
-              fixed(width: 318, height: 318) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 320) {
+                ...GatsbyImageSharpFluid
               }
             }
           },
