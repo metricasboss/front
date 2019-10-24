@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
       <section className="section">
         <div className="container">
-          <h2 className="title">Últimos posts do Blog</h2>
+          <h2 className="title has-text-dark has-text-weight-bold">Últimos posts do blog</h2>
           <Grid posts={data.googleAnalytics.edges} />
         </div>
       </section>
