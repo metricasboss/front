@@ -16,73 +16,104 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <nav className="navbar" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
-            <img alt="" src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-          </a>
+      <nav className="is-spaced navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+        <div className="container">
+          <div className="navbar-brand">
+            <a className="navbar-item" href="#">
+              <img alt="" src="https://metricasboss.com.br/assets/images/mala-logo.svg" width="35" height="32" />
+              <h1 className="title is-4">Métricas Boss</h1>
+            </a>
 
-          <Link className={`navbar-burger burger ${this.state.showHamburguer
-          ? "is-active"
-          : ""}`} 
-          aria-label="menu" 
-          aria-expanded="false" 
-          data-target="navbarBasicExample" 
-          onClick={this.handleClick}>
+            <Link className={`navbar-burger burger ${this.state.showHamburguer
+            ? "is-active"
+            : ""}`} 
+            aria-label="menu" 
+            aria-expanded="false" 
+            data-target="navbarBasicExample" 
+            onClick={this.handleClick}>
 
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </Link>
-        </div>
-
-        <div id="navbarBasicExample" className={`navbar-menu ${this.state.showHamburguer
-          ? "is-active"
-          : ""}`}>
-          <div className="navbar-start">
-            
-          <Link 
-            to="/"
-            className="navbar-item"
-          >
-            Home
-          </Link>
-
-          <Link 
-            to="/"
-            className="navbar-item"
-          >
-            Documentation
-          </Link>
-
-            <div className="navbar-item has-dropdown is-hoverable">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </Link>
+          </div>
+      
+          <div className={`navbar-menu ${this.state.showHamburguer
+            ? "is-active"
+            : ""}`}>
+            <div className="navbar-end">
+              
             <Link 
-            to="/"
-            className="navbar-link"
-          >
-            More
-          </Link>
-              <div className="navbar-dropdown">
-                <Link 
-                  to="/"
-                  className="navbar-item"
-                >
-                  Jobs
-                </Link>
+              to="/"
+              className="navbar-item"
+            >
+              F.A.Q
+            </Link>
 
-                <Link 
+            <Link 
+              to="/"
+              className="navbar-item"
+            >
+              O que fazemos
+            </Link>
+
+            <Link 
+              to="/"
+              className="navbar-item"
+            >
+              Podcast
+            </Link>
+
+            <Link 
+              to="/"
+              className="navbar-item"
+            >
+              Quem Somos
+            </Link>
+
+            <Link 
+              to="/"
+              className="navbar-item"
+            >
+              Cases
+            </Link>
+
+              <div className="navbar-item has-dropdown is-hoverable">
+              <Link 
+              to="/"
+              className="navbar-link"
+            >
+              Serviços
+            </Link>
+                <div className="navbar-dropdown">
+                  <Link 
+                    to="/"
+                    className="navbar-item"
+                  >
+                    Auditoria
+                  </Link>
+
+                  <Link 
+                    to="/"
+                    className="navbar-item"
+                  >
+                    Consultoria
+                  </Link>
+                  <hr className="navbar-divider" />
+                  <Link 
+                    to="/"
+                    className="navbar-item"
+                  >
+                    Test
+                  </Link>
+                </div>
+
+                  <Link
                   to="/"
                   className="navbar-item"
-                >
-                  Contact
-                </Link>
-                <hr className="navbar-divider" />
-                <Link 
-                  to="/"
-                  className="navbar-item"
-                >
-                  Report an issue
-                </Link>
+                  >
+                    Blog
+                  </Link>
               </div>
             </div>
           </div>
