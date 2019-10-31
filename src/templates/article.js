@@ -28,12 +28,12 @@ const ArticleTemplate = ({ data }) => (
                                     <div class="content">
                                         <h5 className="title is-6">
                                             <Link className="has-text-grey-dark"
-                                              to={`/authors/User_${data.strapiArticle.author.id}`}>
+                                              to={`/authors/${data.strapiArticle.author.username}`}>
                                                 {data.strapiArticle.author.username}
                                             </Link>
                                         </h5>
                                         <Link className="has-text-grey-dark is-size-7"
-                                              to={`#`}>Ver mais posts</Link>
+                                              to={`/authors/${data.strapiArticle.author.username}`}>Ver mais posts</Link>
                                     </div>
                                 </div>
                             </div>
