@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 
 const UserTemplate = ({ data }) => (
     <Layout>
+      <SEO title={data.strapiUser.username} />  
       <h1>{data.strapiUser.username}</h1>
       <ul>
         {data.strapiUser.articles.map(article => (
