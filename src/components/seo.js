@@ -29,8 +29,11 @@ function SEO({ description, lang, meta, title }) {
 
   return (
     <Helmet
+      bodyAttributes={{
+        class: 'has-navbar-fixed-top'
+      }}
       htmlAttributes={{
-        lang,
+        lang, 
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -73,7 +76,7 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `pt-br`,
   meta: [],
   description: ``,
 }
