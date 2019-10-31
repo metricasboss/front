@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { FaBeer } from 'react-icons/fa';
 
 class Footer extends React.Component {
   
@@ -10,9 +11,7 @@ class Footer extends React.Component {
         <div className="container">     
           <div className="columns is-mobile">
             <div className="column is-four-fifths">
-              <span className="icon">
-                <i className="fab fa-facebook-square"></i>
-              </span>
+              <FaBeer />
               <span className="icon">
                 <i className="fab fa-facebook-square"></i>
               </span>
