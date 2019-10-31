@@ -5,3 +5,12 @@
  */
 
 // You can delete this file if you're not using it
+const { Helmet } = require("react-helmet")
+
+exports.onRenderBody = (
+  { setBodyAttributes },
+  pluginOptions
+) => {
+  const helmet = Helmet.renderStatic()
+  setBodyAttributes(helmet.bodyAttributes.toComponent())
+}
