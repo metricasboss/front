@@ -17,8 +17,3 @@ const FaqPage = ({ data }) => (
 )
 
 export default FaqPage
-
-export const pageQuery = graphql`
-
-`
-
