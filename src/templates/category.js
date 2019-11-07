@@ -2,9 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout' 
 import Grid from "../components/grid"
+import SEO from "../components/seo"
 
 const CategoryTemplate = ({ data }) => (
   <Layout>
+	<SEO title={data.strapiCategory.name} />
     <section className="section">
       <div className="container">
 
