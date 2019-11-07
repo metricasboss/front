@@ -1,6 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
-import { FaBeer } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+import { FaSpotify } from 'react-icons/fa';
 
 class Footer extends React.Component {
   
@@ -11,16 +14,31 @@ class Footer extends React.Component {
         <div className="container">     
           <div className="columns is-mobile">
             <div className="column is-four-fifths">
-              <FaBeer />
-              <span className="icon">
-                <i className="fab fa-facebook-square"></i>
-              </span>
-              <span className="icon">
-                <i className="fab fa-facebook-square"></i>
-              </span>
-              <span className="icon">
-                <i className="fab fa-facebook-square"></i>
-              </span>
+
+            <span className="icon is-large">              
+                <Link to="#">
+                  <FaLinkedin size="2em" color="black" />
+                </Link>
+            </span>
+
+            <span className="icon is-large">              
+                <Link to="#">
+                  <FaFacebook size="2em" color="black" />
+                </Link>
+            </span>
+
+            <span className="icon is-large">              
+                <Link to="#">
+                  <FaYoutube size="2em" color="black" />
+                </Link>
+            </span>
+
+            <span className="icon is-large">              
+                <Link to="#">
+                  <FaSpotify size="2em" color="black" />
+                </Link>
+            </span>             
+              
             </div>
             <div className="column">
                 <Link to="#back-to-top">
