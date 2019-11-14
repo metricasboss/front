@@ -22,7 +22,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query {
     googleAnalytics: allStrapiArticle(
-      filter: {categories: {elemMatch: {slug: {eq: "google-analytics"}}}},
+      filter: {categories: {elemMatch: {slug: {eq: "web-analytics"}}}},
       limit: 4
       ) {
       edges {
