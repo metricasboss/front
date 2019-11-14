@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
 import Layout from '../components/layout'
 import SEO from "../components/seo"
 
@@ -21,7 +21,7 @@ const ArticleTemplate = ({ data }) => (
                             <div className="media">
                                 <div class="media-left">
                                     <figure class="image is-64x64">
-                                        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image" />
+                                    <Img fluid={`https://bulma.io/images/placeholders/128x128.png`}/>
                                     </figure>
                                 </div>
                                 <div class="media-content">

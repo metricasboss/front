@@ -57,9 +57,9 @@ class Footer extends React.Component {
                 className="has-text-dark"
                 >
                 Métricas Boss:
-                </Link> 
+                </Link>
                 {` © `} {new Date().getFullYear()} - Versão 4.0
-                <p>Web Analytics é mais que um gráfico bonitinho!</p>
+                <span>Web Analytics é mais que um gráfico bonitinho!</span>
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ class Footer extends React.Component {
 
           <nav className="navbar" role="navigation">
             <div className="container">
-              <div class="navbar-menu is-active has-text-centered">
+              <div className="navbar-menu is-active has-text-centered">
                 <div className="navbar-end">
                   <Link 
                     to="/"

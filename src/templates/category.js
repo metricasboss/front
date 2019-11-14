@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link,graphql } from 'gatsby'
 import Layout from '../components/layout' 
 import Grid from "../components/grid"
 import SEO from "../components/seo"
@@ -12,8 +12,8 @@ const CategoryTemplate = ({ data }) => (
 
 		<nav className="breadcrumb" aria-label="breadcrumbs">
 			<ul>
-				<li><a href="#">Categorias</a></li>
-				<li className="is-active"><a href="#" aria-current="page">{data.strapiCategory.name}</a></li>
+				<li><Link to="/">Categorias</Link></li>
+				<li className="is-active"><Link to="#" aria-current="page">{data.strapiCategory.name}</Link></li>
 			</ul>
 		</nav>
 
@@ -21,10 +21,10 @@ const CategoryTemplate = ({ data }) => (
 
 		<div className="tabs">
 			<ul>
-				<li className="is-active"><a>{data.strapiCategory.name}</a></li>
-				<li><a>Google Tag Manager</a></li>
-				<li><a>Podcast</a></li>
-				<li><a>Todas</a></li>
+				<li className="is-active"><Link to="/">{data.strapiCategory.name}</Link></li>
+				<li><Link to="/">Google Tag Manager</Link></li>
+				<li><Link to="/">Podcast</Link></li>
+				<li><Link to="/">Todas</Link></li>
 			</ul>
 		</div>
         
