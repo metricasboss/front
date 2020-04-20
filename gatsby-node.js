@@ -96,10 +96,34 @@ exports.createPages = ({ actions, graphql }) => {
     })
   });
 
+const getFaqs = makeRequest(graphql, `
+  {
+    allStrapiArticle {
+      edges {
+        node {
+          id
+        }
+      }
+    }
+  }
+  `).then(result => {
+  // Create pages for each article.
+  result.data.allStrapiArticle.edges.forEach(({ node }) => {
+    createPage({
+      path: `/faq/${node.id}`,
+      component: path.resolve(`src/templates/faqSingle.js`),
+      context: {
+        id: node.id,
+      },
+    })
+  })
+});
+
   // Queries for articles and authors nodes to use in creating pages.
   return Promise.all([
     getArticles,
     getAuthors,
     getCategories,
+    getFaqs,
   ])
 };
