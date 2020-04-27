@@ -96,7 +96,28 @@ exports.createPages = ({ actions, graphql }) => {
     })
   });
 
- 
+  const getCases = makeRequest(graphql, `
+    {
+      allStrapiCategory {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+    `).then(result => {
+    // Create pages for each user.
+    result.data.allStrapiCategory.edges.forEach(({ node }) => {
+      createPage({
+        path: `/cases/${node.slug}`,
+        component: path.resolve(`src/pages/cases.js`),
+        context: {
+          slug: node.slug,
+        },
+      })
+    })
+  });
 
 
   // Queries for articles and authors nodes to use in creating pages.
