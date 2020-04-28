@@ -98,9 +98,10 @@ exports.createPages = ({ actions, graphql }) => {
 
 const getFaqs = makeRequest(graphql, `
   {
-    allStrapiArticle {
+    allStrapiFaq {
       edges {
         node {
+          Ask
           id
         }
       }
@@ -108,7 +109,7 @@ const getFaqs = makeRequest(graphql, `
   }
   `).then(result => {
   // Create pages for each article.
-  result.data.allStrapiArticle.edges.forEach(({ node }) => {
+  result.data.allStrapiFaq.edges.forEach(({ node }) => {
     createPage({
       path: `/faq/${node.id}`,
       component: path.resolve(`src/templates/faqSingle.js`),

@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Grid from "../components/grid"
 
 const FaqPage = ({ data }) => (
   <Layout>
@@ -35,26 +34,10 @@ const FaqPage = ({ data }) => (
           <div className="column is-one-third">
             <h3 className="is-size-5">Google Analytics</h3>
             <ul>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-            </ul>   
-          </div>
-          <div className="column is-one-third">
-            <h3 className="is-size-5">Google Analytics</h3>
-            <ul>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-            </ul>   
-          </div>
-          <div className="column is-one-third">
-            <h3 className="is-size-5">Google Analytics</h3>
-            <ul>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-            </ul>   
+              {data.allStrapiFaq.edges.map(document => (
+                <li><Link to={`/faq/${document.node.id}`}>{ document.node.Ask }</Link></li>
+              ))} 
+            </ul>
           </div>
         </div>
 
@@ -89,3 +72,16 @@ const FaqPage = ({ data }) => (
 )
 
 export default FaqPage
+
+export const pageQuery = graphql`
+  query {
+    allStrapiFaq {
+      edges {
+        node {
+          Ask
+          id
+        }
+      }
+    }
+  }
+`

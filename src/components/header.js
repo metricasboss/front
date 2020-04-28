@@ -19,10 +19,10 @@ class Header extends React.Component {
       <nav className="is-spaced navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
-            <a className="navbar-item" href="#">
+            <Link className="navbar-item" to="/">
               <img alt="" src="https://metricasboss.com.br/assets/images/mala-logo.svg" width="35" height="32" />
               <h1 className="title is-4">Métricas Boss</h1>
-            </a>
+            </Link>
 
             <Link className={`navbar-burger burger ${this.state.showHamburguer
             ? "is-active"
