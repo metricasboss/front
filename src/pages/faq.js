@@ -29,44 +29,18 @@ const FaqPage = ({ data }) => (
             <h1 className="is-size-4">Perguntas Frequentes</h1>
           </div>
         </div>
-
-        <div className="columns is-desktop">
-          <div className="column is-one-third">
-            <h3 className="is-size-5">Google Analytics</h3>
-            <ul>
-              {data.allStrapiFaq.edges.map(document => (
-                <li><Link to={`/faq/${document.node.id}`}>{ document.node.Ask }</Link></li>
+        {data.allStrapiCategory.nodes.map(document => (      
+          <div className="columns is-desktop">
+            <div className="column is-one-third">
+              <h3 className="is-size-5">{document.name}</h3>
+              <ul>
+              {document.faqs.map(faq => ( 
+                <li><Link to={`/faq/Faq_${faq.id}`}>{ faq.Ask }</Link></li>
               ))} 
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
-
-        <div className="columns is-desktop">
-          <div className="column is-one-third">
-            <h3 className="is-size-5">Google Analytics</h3>
-            <ul>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-            </ul>   
-          </div>
-          <div className="column is-one-third">
-            <h3 className="is-size-5">Google Analytics</h3>
-            <ul>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-            </ul>   
-          </div>
-          <div className="column is-one-third">
-            <h3 className="is-size-5">Google Analytics</h3>
-            <ul>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-              <li><Link>O que é Google Analytics</Link></li>
-            </ul>   
-          </div>
-        </div>  
+        ))} 
       </section>
   </Layout>
 )
@@ -75,10 +49,13 @@ export default FaqPage
 
 export const pageQuery = graphql`
   query {
-    allStrapiFaq {
-      edges {
-        node {
+    allStrapiCategory {
+      nodes {
+        id
+        name
+        faqs {
           Ask
+          answer
           id
         }
       }
