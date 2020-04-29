@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Search from "../components/SearchFaqContainer"
 
 const FaqPage = ({ data }) => (
   <Layout>
@@ -17,7 +18,7 @@ const FaqPage = ({ data }) => (
 
         <div className="columns is-desktop">
           <div className="column is-three-fifths is-offset-one-fifth">
-            <input class="input is-medium is-rounded" type="text" placeholder="Digite palavras-chaves para encontrar sua dúvida"></input>
+            <Search/>
           </div>
         </div>
         
@@ -30,12 +31,12 @@ const FaqPage = ({ data }) => (
           </div>
         </div>
         {data.allStrapiCategory.nodes.map(document => (      
-          <div className="columns is-desktop">
+          <div key={document.id} className="columns is-desktop">
             <div className="column is-one-third">
               <h3 className="is-size-5">{document.name}</h3>
               <ul>
               {document.faqs.map(faq => ( 
-                <li><Link to={`/faq/Faq_${faq.id}`}>{ faq.Ask }</Link></li>
+                <li key={faq.id}><Link to={`/faq/Faq_${faq.id}`}>{ faq.Ask }</Link></li>
               ))} 
               </ul>
             </div>
