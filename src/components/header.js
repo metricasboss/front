@@ -43,81 +43,75 @@ class Header extends React.Component {
             : ""}`}>
             <div className="navbar-end">
               
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              F.A.Q
-            </Link>
-
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              O que fazemos
-            </Link>
-
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              Podcast
-            </Link>
-
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              Quem Somos
-            </Link>
-
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              Cases
-            </Link>
-
-              <div className="navbar-item has-dropdown is-hoverable">
               <Link 
+                to="/"
+                className="navbar-item"
+              >
+                O que fazemos
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Blog
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Podcast
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Vídeos
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Cursos
+              </Link>
+
+            
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Cases
+              </Link>
+                  
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                FAQ
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Consultoria
+              </Link>
+              <hr className="navbar-divider" />   
+
+              <Link
               to="/"
-              className="navbar-link"
-            >
-              Serviços
-            </Link>
-                <div className="navbar-dropdown">
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Auditoria
-                  </Link>
+              className="navbar-item button is-success"
+              >
+                Teste o seu Google Analytics
+              </Link>
 
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Consultoria
-                  </Link>
-                  <hr className="navbar-divider" />
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Test
-                  </Link>
-                </div>
+            </div>
 
-                  <Link
-                  to="/"
-                  className="navbar-item"
-                  >
-                    Blog
-                  </Link>
-              </div>
             </div>
           </div>
-        </div>
       </nav>
     )
   }

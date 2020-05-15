@@ -41,9 +41,9 @@ class Footer extends React.Component {
               
             </div>
             <div className="column">
-                <Link to="#back-to-top">
+                <Link to="#back-to-top" className="has-text-dark">
                   <i className="fas fa-home"></i> 
-                  <p className="has-text-right">Voltar ao topo</p>
+                  <p className="has-text-right">^ Voltar ao topo</p>
                 </Link>
             </div>            
           </div>  
@@ -65,58 +65,73 @@ class Footer extends React.Component {
           </div>
           
 
-          <nav className="navbar" role="navigation">
+          <nav className="navbar has-background-white-bis" role="navigation">
             <div className="container">
               <div class="navbar-menu is-active has-text-centered">
                 <div className="navbar-end">
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    F.A.Q
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    O que fazemos
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Podcast
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                   Quem Somos
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Cases
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Serviços
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Blog
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    F.A.Q
-                  </Link>                
+                <Link 
+                to="/"
+                className="navbar-item"
+              >
+                O que fazemos
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Blog
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Podcast
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Vídeos
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Cursos
+              </Link>
+
+            
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Cases
+              </Link>
+                  
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                FAQ
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Consultoria
+              </Link> 
+
+              <Link
+              to="/"
+              className="navbar-item"
+              >
+                Teste o seu Google Analytics
+              </Link>              
                 </div>
               </div>
             </div>
