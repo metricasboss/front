@@ -1,11 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from "../components/seo"
 import "./article.scss"
 import Ad from "../images/publi.png"
-import Light from "../images/light.png"
 import Autor from "../images/gustavo.png"
 import IcoLink from "../images/link.png"
 import IcoMail from "../images/mail.png"
@@ -27,11 +25,11 @@ const ArticleTemplate = ({ data }) => (
             <div className="container">
             <div className="columns">
                 <div className="column is-three-quarters">
-                    <a href="https://prime.metricasboss.com.br" target="_blank">
+                    <Link to="https://prime.metricasboss.com.br?utm_source=site&utm_medium=post_header">
                         <figure className="image is-fullwidth">
                             <img src={Ad} alt="MB Prime" className="is-fullwidth" />
                         </figure>   
-                    </a>                                
+                    </Link>                                
                 </div>   
                 <div className="column"> 
                     <div className="light has-text-white has-background-black">
@@ -81,11 +79,11 @@ const ArticleTemplate = ({ data }) => (
                             </div>        
                         </div>
                         <div className="content">
-                            <a href="https://prime.metricasboss.com.br" target="_blank">
+                            <Link to="https://prime.metricasboss.com.br?utm_source=site&utm_medium=post_sidebar">
                                 <figure className="image is-fullwidth is-marginless">
                                     <img src={Adsquare} alt="MB Prime" className="is-fullwidth" />
                                 </figure>  
-                            </a> 
+                            </Link> 
                         </div>
                         <div className="content">
                         <h4 className="title has-text-grey is-size-4 has-text-weight-bold">Posts por tema</h4>
