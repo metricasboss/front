@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 import Grid from "../components/grid"
 import Calendly from "../components/calendly"
 import "../components/home.scss"
-import Img from "gatsby-image"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -37,17 +36,17 @@ const IndexPage = ({ data }) => (
                   nossa ferramenta de  auditoria:</p>
                       <div className="field">
                         <div className="control">
-                          <input type="text" className="input is-rounded" placeholder="Digite seu nome"/>
+                          <input type="text" className="input is-rounded" placeholder="Digite seu nome" aria-label="nome" />
                         </div>
                       </div>
                       <div className="field">
                         <div className="control">
-                          <input type="email" className="input is-rounded" placeholder="Digite seu e-mail"/>
+                          <input type="email" className="input is-rounded" placeholder="Digite seu e-mail" aria-label="email"/>
                         </div>
                       </div>
                       <div className="field">
                         <div className="control">
-                          <input type="text" className="input is-rounded" placeholder="Digite o nome da sua empresa"/>
+                          <input type="text" className="input is-rounded" placeholder="Digite o nome da sua empresa" aria-label="nome da empresa"/>
                         </div>
                       </div>
                     <div className="field-body">
@@ -91,34 +90,7 @@ const IndexPage = ({ data }) => (
             <div className="column is-two-fifths bg-form is-hidden-mobile"></div>
             <div className="column">
               <h3 className="title">Vamos trocar uma idéia?</h3>
-              <form action="" className="home-contato">
-              <div className="field-body">
-                  <div className="field">
-                    <div className="control">
-                      <input type="text" className="input is-rounded is-medium" placeholder="Digite seu nome"/>
-                    </div>
-                  </div>
-                  <div className="field">
-                    <div className="control">
-                      <input type="text" className="input is-rounded is-medium" type="email" placeholder="Digite seu e-mail"/>
-                    </div>
-                  </div>
-                </div>
-                <div className="field-body">
-                  <div className="field">
-                    <div className="control">
-                      <textarea className="textarea is-medium" rows="7" name="" placeholder="Digite sua mensagem"></textarea>
-                    </div>
-                  </div>
-                </div>
-                <div className="field-body">
-                  <div className="field">
-                    <div className="control">
-                      <button className="button is-success is-pulled-right">Mande um e-mail pra gente :)</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <Calendly/>
             </div>
           </div>
         </div>
