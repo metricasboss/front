@@ -21,7 +21,7 @@ class Calendly extends React.Component {
         }
         return (
             <div className="calendly">
-                <div className="calendly-inline-widget" data-url="https://calendly.com/metricasboss/bate-papo" style={calendlyStyle}></div>
+                <div className="calendly-inline-widget" data-url="https://calendly.com/gustavo-mb/15min" style={calendlyStyle}></div>
             </div>
         )
     }
