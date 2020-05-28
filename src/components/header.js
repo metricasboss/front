@@ -16,7 +16,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <nav className="is-spaced navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+      <nav className="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
           <Link to="/" className="navbar-item">
@@ -101,12 +101,14 @@ class Header extends React.Component {
               </Link>
               <hr className="navbar-divider" />   
 
-              <Link
-              to="/"
-              className="navbar-item button is-success"
-              >
-                Teste o seu Google Analytics
-              </Link>
+              <div className="navbar-item">
+                <Link
+                to="/"
+                className="button is-success"
+                >
+                  Teste o seu Google Analytics
+                </Link>
+              </div>
 
             </div>
 

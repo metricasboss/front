@@ -11,9 +11,8 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
   
-      <section className="section">
-          <div className="container">
-            <div className="columns cta-bg">
+      <section className="container">
+          <div className="columns cta-bg">
             <div className="column is-4 home-mac">
               
             </div>
@@ -59,7 +58,6 @@ const IndexPage = ({ data }) => (
                 </form>
               </div>
             </div>
-          </div>
       </section>
 
       <section className="section">
