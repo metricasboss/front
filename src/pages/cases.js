@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./cases.scss"
@@ -116,37 +116,3 @@ const CasesPage = ({ data }) => (
 )
 
 export default CasesPage
-
-export const pageQuery = graphql`
-  query {
-    googleAnalytics: allStrapiArticle(
-      filter: {categories: {elemMatch: {slug: {eq: "web-analytics"}}}},
-      limit: 4
-      ) {
-      edges {
-        node {
-          id,
-          title,
-          content,
-          feature {
-            id
-            childImageSharp {
-              fluid(maxWidth: 320) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          },
-          author {
-            id,
-            username
-          },
-          categories {
-            id,
-            name,
-            slug
-          }
-        }
-      }
-    }
-  }
-`

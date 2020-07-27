@@ -25,35 +25,21 @@ export const query = graphql`
     strapiUser(username: { eq: $username }) {
       id
       username
-      articles {
-        id
-        title
-        content
-      }
     }
-    allStrapiArticle(filter: {author: {username: {eq: $username}}}) {
+    allStrapiArticle(filter: {author: {elemMatch: {username: {eq: $username}}}}) {
       edges {
         node {
-           id,
-           title,
-           content,
-           feature {
-             id
-             childImageSharp {
-               fluid(maxWidth: 320) {
-                 ...GatsbyImageSharpFluid
-               }
-             }
-           },
-           author {
-             id,
-             username
-           },
-           categories {
-             id,
-             name,
-             slug
-           }
+          id
+          title
+          slug
+          feature {
+              id
+              childImageSharp {
+                fluid(maxWidth: 320) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            },
         }
       }
     }

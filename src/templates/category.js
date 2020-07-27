@@ -44,8 +44,11 @@ export const query = graphql`
 			name
 		}
         allStrapiArticle(
-			filter: {categories: {elemMatch: {slug: {eq: $slug}}}},
-			) {
+			filter: {
+				category: {
+					slug: {eq: $slug}
+				}
+			}) {
 			edges {
 			  node {
 				id,
@@ -63,7 +66,7 @@ export const query = graphql`
 				  id,
 				  username
 				},
-				categories {
+				category {
 				  id,
 				  name,
 				  slug

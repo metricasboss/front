@@ -103,7 +103,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query {
     googleAnalytics: allStrapiArticle(
-      filter: {categories: {elemMatch: {slug: {eq: "web-analytics"}}}},
+      filter: {category: {slug: {eq: "web-analytics"}}},
       limit: 4
       ) {
       edges {
@@ -122,11 +122,6 @@ export const pageQuery = graphql`
           author {
             id,
             username
-          },
-          categories {
-            id,
-            name,
-            slug
           }
         }
       }
