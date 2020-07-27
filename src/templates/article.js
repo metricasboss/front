@@ -8,6 +8,7 @@ import Autor from "../images/gustavo.png"
 import IcoLink from "../images/link.png"
 import IcoMail from "../images/mail.png"
 import Adsquare from "../images/square-plubi.png"
+import Reactmarkdown from "react-markdown"
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
@@ -48,15 +49,7 @@ const ArticleTemplate = ({ data }) => (
                 <div className="columns">
                     <div className="column is-three-quarters">                        
                         <div className="content">
-                            <p>Possivelmente você já havia usado no GA a dimensão tamanho da tela, mas já usou a dimensão tamanho do Navegador? Essa dimensão está disponível no Google Analytics desde 2016 mas poucas pessoas possuem conhecimento e sabem como ela pode te ajudar a pegar fraudes! Sim, fraudes! Essa é uma dimensão MUITO importante para poder nos ajudar a entender se alguma origem está fazendo sobreposição.</p>
-
-                            <p>A dimensão tamanho do Navegador do GA informa o tamanho da viewport do navegador do usuário.
-                            Isso tem algumas implicações óbvias na análise de UX / UI. Ela pode ser usado nos mesmos tipos de análise em que você estava usando a Resolução de tela, mas é mais preciso. Você pode usá-lo para análise acima da dobra, para análise de rolagem de página. Você pode até comparar a resolução da tela para exibir o tamanho da porta! Menos óbvios (mas mais interessantes) são os usos possíveis para a detecção de fraudes. SIM, fraudes!</p>
-
-                            <p>Detecção de Fraude de Afiliados</p>
-                            <p>Como o tamanho do navegador pode te ajudar a pegar fraudes Gif</p>
-                            <p>Espero que esse artigo tenha lhe ajudado! :)</p>
-                            <p>{data.strapiArticle.content}</p>
+                            <Reactmarkdown source={data.strapiArticle.content} escapeHtml={false}/>
                         </div>
                     </div>
                     <div className="column">
