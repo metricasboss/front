@@ -33,17 +33,7 @@ const ArticleTemplate = ({ data }) => (
                     </Link>                                
                 </div>   
                 <div className="column"> 
-                    <div className="light has-text-white has-background-black">
-                        <div className="media is-vcentered">
-                            <div className="media-left">
-                                <span className="luz-apagar"></span>
-                            </div>
-                            <div className="media-content">
-                                <Link to="" className="apagar">ATIVAR</Link> <br />
-                                Modo Noturno
-                            </div>                        
-                        </div>
-                    </div>
+                    <darkSwitch />
                 </div>
             </div>
                 <div className="columns">
