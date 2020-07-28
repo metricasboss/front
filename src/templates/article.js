@@ -72,26 +72,13 @@ const ArticleTemplate = ({ data }) => (
                         <div className="content">
                         <h4 className="title has-text-grey is-size-4 has-text-weight-bold">Posts por tema</h4>
                             <ul className="cat-list is-size-6">
-                                <li><Link className="has-text-grey has-text-weight-bold is-uppercase" 
-                                          to={`#`}>
-                                            Web Analytics
-                                    </Link>
-                                </li>
-                                <li><Link className="has-text-grey has-text-weight-bold is-uppercase" 
-                                          to={`#`}>
-                                            Google Analytics
-                                    </Link>
-                                </li>
-                                <li><Link className="has-text-grey has-text-weight-bold is-uppercase"
-                                          to={`#`}>
-                                            Google Tag Manager
-                                    </Link>
-                                </li>
-                                <li><Link className="has-text-grey has-text-weight-bold is-uppercase"
-                                          to={`#`}>
-                                            Podcast de Web Analytics
-                                    </Link>
-                                </li>
+                                {data.allStrapiCategory.edges.map(category => (
+                                    <li key={category.node.id}><Link className="has-text-grey has-text-weight-bold is-uppercase" 
+                                                to={category.node.slug}>
+                                                {category.node.name}
+                                        </Link>
+                                    </li>
+                                ))} 
                             </ul>
                         </div>
                     </div>
@@ -121,5 +108,15 @@ export const query = graphql`
                 username
             }
         }
+
+        allStrapiCategory {
+            edges {
+              node {
+                slug
+                name
+                id
+              }
+            }
+          }
     }
 `
