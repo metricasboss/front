@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Axios from "axios"
 import * as JsSearch from "js-search"
-import { Link } from "gatsby";
 import ListFaqResults from "../components/ListFaqResults"
 
 

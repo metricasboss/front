@@ -36,7 +36,7 @@ const FaqPage = ({ data }) => (
               <h3 className="is-size-5">{document.name}</h3>
               <ul>
               {document.faqs.map(faq => ( 
-                <li key={faq.id}><Link to={`/faq/Faq_${faq.id}`}>{ faq.Ask }</Link></li>
+                <li key={faq.id}><Link to={`/faq/Faq_${faq.id}`}>{ faq.ask }</Link></li>
               ))} 
               </ul>
             </div>
@@ -55,7 +55,7 @@ export const pageQuery = graphql`
         id
         name
         faqs {
-          Ask
+          ask
           answer
           id
         }

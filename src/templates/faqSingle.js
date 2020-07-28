@@ -55,7 +55,7 @@ export default FaqSingleTemplate
 export const query = graphql`
     query FaqSingleTemplate($id: String!) {
         strapiFaq(id: {eq: $id}) {
-           Ask
+           ask
            answer
            id
         }

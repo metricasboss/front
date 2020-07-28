@@ -101,7 +101,7 @@ const getFaqs = makeRequest(graphql, `
     allStrapiFaq {
       edges {
         node {
-          Ask
+          ask
           id
         }
       }

@@ -87,7 +87,7 @@ class Header extends React.Component {
               </Link>
                   
               <Link 
-                to="/"
+                to="/faq"
                 className="navbar-item"
               >
                 FAQ
