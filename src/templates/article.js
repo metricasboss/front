@@ -74,7 +74,7 @@ const ArticleTemplate = ({ data }) => (
                             <ul className="cat-list is-size-6">
                                 {data.allStrapiCategory.edges.map(category => (
                                     <li key={category.node.id}><Link className="has-text-grey has-text-weight-bold is-uppercase" 
-                                                to={category.node.slug}>
+                                                to={`/categories/${category.node.slug}`}>
                                                 {category.node.name}
                                         </Link>
                                     </li>
