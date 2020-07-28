@@ -10,13 +10,3 @@ const Grid = ({ posts }) => (
         ))} 
     </div>
 )
-
-Grid.propTypes = {
-    posts: PropTypes.array,
-}
-
-Grid.defaultProps = {
-    posts: [],
-}
-
-export default Grid

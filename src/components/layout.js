@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.scss"
+import ThemeContext from '../context/ThemeContext'
 
 
 const Layout = ({ children }) => {
@@ -27,9 +28,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-      <Footer />         
+      <ThemeContext.Consumer>
+        {theme => (
+          <div className={theme.dark ? 'dark' : 'light'}>
+            <Header siteTitle={data.site.siteMetadata.title} />
+              <main>{children}</main>
+            <Footer />         
+          </div>
+        )}
+      </ThemeContext.Consumer>
     </>
   )
 }

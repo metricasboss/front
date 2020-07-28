@@ -1,6 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
-import { FaBeer } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+import { FaSpotify } from 'react-icons/fa';
 
 class Footer extends React.Component {
   
@@ -11,21 +14,36 @@ class Footer extends React.Component {
         <div className="container">     
           <div className="columns is-mobile">
             <div className="column is-four-fifths">
-              <FaBeer />
-              <span className="icon">
-                <i className="fab fa-facebook-square"></i>
-              </span>
-              <span className="icon">
-                <i className="fab fa-facebook-square"></i>
-              </span>
-              <span className="icon">
-                <i className="fab fa-facebook-square"></i>
-              </span>
+
+            <span className="icon is-large">              
+                <Link to="#">
+                  <FaLinkedin size="2em" color="black" />
+                </Link>
+            </span>
+
+            <span className="icon is-large">              
+                <Link to="#">
+                  <FaFacebook size="2em" color="black" />
+                </Link>
+            </span>
+
+            <span className="icon is-large">              
+                <Link to="#">
+                  <FaYoutube size="2em" color="black" />
+                </Link>
+            </span>
+
+            <span className="icon is-large">              
+                <Link to="#">
+                  <FaSpotify size="2em" color="black" />
+                </Link>
+            </span>             
+              
             </div>
             <div className="column">
-                <Link to="#back-to-top">
+                <Link to="#back-to-top" className="has-text-dark">
                   <i className="fas fa-home"></i> 
-                  <p className="has-text-right">Voltar ao topo</p>
+                  <p className="has-text-right">^ Voltar ao topo</p>
                 </Link>
             </div>            
           </div>  
@@ -39,66 +57,81 @@ class Footer extends React.Component {
                 className="has-text-dark"
                 >
                 Métricas Boss:
-                </Link> 
+                </Link>
                 {` © `} {new Date().getFullYear()} - Versão 4.0
-                <p>Web Analytics é mais que um gráfico bonitinho!</p>
+                <span>Web Analytics é mais que um gráfico bonitinho!</span>
               </p>
             </div>
           </div>
           
 
-          <nav className="navbar" role="navigation">
+          <nav className="navbar has-background-white-bis" role="navigation">
             <div className="container">
-              <div class="navbar-menu is-active has-text-centered">
+              <div className="navbar-menu is-active has-text-centered">
                 <div className="navbar-end">
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    F.A.Q
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    O que fazemos
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Podcast
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                   Quem Somos
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Cases
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Serviços
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Blog
-                  </Link>
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    F.A.Q
-                  </Link>                
+                <Link 
+                to="/"
+                className="navbar-item"
+              >
+                O que fazemos
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Blog
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Podcast
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Vídeos
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Cursos
+              </Link>
+
+            
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Cases
+              </Link>
+                  
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                FAQ
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Consultoria
+              </Link> 
+
+              <Link
+              to="/"
+              className="navbar-item"
+              >
+                Teste o seu Google Analytics
+              </Link>              
                 </div>
               </div>
             </div>

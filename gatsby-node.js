@@ -55,7 +55,7 @@ exports.createPages = ({ actions, graphql }) => {
       allStrapiUser {
         edges {
           node {
-            id
+            username
           }
         }
       }
@@ -64,10 +64,10 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each user.
     result.data.allStrapiUser.edges.forEach(({ node }) => {
       createPage({
-        path: `/authors/${node.id}`,
+        path: `/authors/${node.username}`,
         component: path.resolve(`src/templates/author.js`),
         context: {
-          id: node.id,
+          username: node.username,
         },
       })
     })

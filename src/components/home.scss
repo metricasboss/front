@@ -1,0 +1,61 @@
+.home-mac{
+    background: url(../images/mac.png) no-repeat center;
+    min-height: 303px;
+    background-size: 100%;
+}
+.cta-bg{
+    background: url(../images/bg.jpg) no-repeat left top black;
+    background-size: 100%;
+    
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+     align-items: center;
+} 
+.ga-ico{
+    background: url(../images/ga-ico.png) no-repeat left center;
+    text-align: justify;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-bottom: 0.75rem;
+    padding-left: 3.75rem;
+} 
+.institucional{
+    background: url(../images/mala-bg.png) no-repeat right bottom;
+} 
+
+.bg-form{
+    background: url(../images/form-img.jpg) no-repeat top center;
+    min-height: 446px;
+    
+} 
+
+.home-contato .field-body .field{
+    margin-bottom: 0.75rem !important;
+}
+
+.home-contato textarea{
+    border-radius: 25px;
+}
+
+
+/*  Ajustes  */
+@media only screen and (max-width: 400px) {
+    .home-mac{
+        background-size: 100%;
+        min-height: 220px !important;
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    .home-mac{
+        background-size: 100%;
+        min-height: 395px;
+    }
+    .cta-bg{
+        background-size: auto;
+    }
+
+    .bg-form{
+        background-size: 100%;
+    }
+} 

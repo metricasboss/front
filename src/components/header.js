@@ -16,15 +16,15 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <nav className="is-spaced navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+      <nav className="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
-            <Link className="navbar-item" to="/">
+          <Link to="/" className="navbar-item">
               <img alt="" src="https://metricasboss.com.br/assets/images/mala-logo.svg" width="35" height="32" />
               <h1 className="title is-4">Métricas Boss</h1>
             </Link>
 
-            <Link className={`navbar-burger burger ${this.state.showHamburguer
+            <Link to="false" className={`navbar-burger burger ${this.state.showHamburguer
             ? "is-active"
             : ""}`} 
             aria-label="menu" 
@@ -43,81 +43,77 @@ class Header extends React.Component {
             : ""}`}>
             <div className="navbar-end">
               
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              F.A.Q
-            </Link>
-
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              O que fazemos
-            </Link>
-
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              Podcast
-            </Link>
-
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              Quem Somos
-            </Link>
-
-            <Link 
-              to="/"
-              className="navbar-item"
-            >
-              Cases
-            </Link>
-
-              <div className="navbar-item has-dropdown is-hoverable">
               <Link 
-              to="/"
-              className="navbar-link"
-            >
-              Serviços
-            </Link>
-                <div className="navbar-dropdown">
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Auditoria
-                  </Link>
+                to="/"
+                className="navbar-item"
+              >
+                O que fazemos
+              </Link>
 
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Consultoria
-                  </Link>
-                  <hr className="navbar-divider" />
-                  <Link 
-                    to="/"
-                    className="navbar-item"
-                  >
-                    Test
-                  </Link>
-                </div>
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Blog
+              </Link>
 
-                  <Link
-                  to="/"
-                  className="navbar-item"
-                  >
-                    Blog
-                  </Link>
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Podcast
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Vídeos
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Cursos
+              </Link>
+
+            
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Cases
+              </Link>
+                  
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                FAQ
+              </Link>
+
+              <Link 
+                to="/"
+                className="navbar-item"
+              >
+                Consultoria
+              </Link>
+              <hr className="navbar-divider" />   
+
+              <div className="navbar-item">
+                <Link
+                to="/"
+                className="button is-success"
+                >
+                  Teste o seu Google Analytics
+                </Link>
               </div>
+
+            </div>
+
             </div>
           </div>
-        </div>
       </nav>
     )
   }
