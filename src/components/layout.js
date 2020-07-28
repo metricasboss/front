@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
     <>
       <ThemeContext.Consumer>
         {theme => (
-          <div className={theme.dark ? 'dark' : 'light'}>
+          <div className={theme.dark ? 'darkness has-background-black has-text-white' : 'lightness'}>
             <Header siteTitle={data.site.siteMetadata.title} />
               <main>{children}</main>
             <Footer />         

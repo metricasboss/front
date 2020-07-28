@@ -9,14 +9,15 @@ import IcoLink from "../images/link.png"
 import IcoMail from "../images/mail.png"
 import Adsquare from "../images/square-plubi.png"
 import Reactmarkdown from "react-markdown"
+import DarkSwitch from "../components/darkSwitch"
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
        <SEO title={data.strapiArticle.title} />
 
-        <section class="section custom-orange-bg">
-            <div class="container">
-                <h1 class="title has-text-white">
+        <section className="section custom-orange-bg">
+            <div className="container">
+                <h1 className="title has-text-white">
                     {data.strapiArticle.title}
                 </h1>
             </div>
@@ -33,7 +34,7 @@ const ArticleTemplate = ({ data }) => (
                     </Link>                                
                 </div>   
                 <div className="column"> 
-                    <darkSwitch />
+                    <DarkSwitch />
                 </div>
             </div>
                 <div className="columns">
