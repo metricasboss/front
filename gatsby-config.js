@@ -19,7 +19,7 @@ module.exports = {
       options: {
         apiURL: `http://api.metricasboss.com.br`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`article`, `user`, `category`],
+        contentTypes: [`article`, `user`, `category`, `faq` ],
       },
     },
     `gatsby-transformer-sharp`,

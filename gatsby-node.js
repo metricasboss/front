@@ -96,34 +96,35 @@ exports.createPages = ({ actions, graphql }) => {
     })
   });
 
-  const getCases = makeRequest(graphql, `
-    {
-      allStrapiCategory {
-        edges {
-          node {
-            slug
-          }
+const getFaqs = makeRequest(graphql, `
+  {
+    allStrapiFaq {
+      edges {
+        node {
+          Ask
+          id
         }
       }
     }
-    `).then(result => {
-    // Create pages for each user.
-    result.data.allStrapiCategory.edges.forEach(({ node }) => {
-      createPage({
-        path: `/cases/${node.slug}`,
-        component: path.resolve(`src/pages/cases.js`),
-        context: {
-          slug: node.slug,
-        },
-      })
+  }
+  `).then(result => {
+  // Create pages for each article.
+  result.data.allStrapiFaq.edges.forEach(({ node }) => {
+    createPage({
+      path: `/faq/${node.id}`,
+      component: path.resolve(`src/templates/faqSingle.js`),
+      context: {
+        id: node.id,
+      },
     })
-  });
-
+  })
+});
 
   // Queries for articles and authors nodes to use in creating pages.
   return Promise.all([
     getArticles,
     getAuthors,
     getCategories,
+    getFaqs,
   ])
 };
